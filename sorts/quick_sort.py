@@ -6,6 +6,11 @@
 @File : quick_sort.py
 @Time : 4/23/22 4:00 PM
 @Desc:
+Time Complexity:
+    Best: O(n*log n)
+    Worst: O(n2)
+    Average: O(n*log n)
+Space Complexity: O(log n)
 """
 
 
@@ -32,11 +37,6 @@ def partition(array, low, high):
 def quick_sort(array, low, high):
     """
     Perform quicksort
-    Time Complexity:
-        Best: O(n*log n)
-        Worst: O(n2)
-        Average: O(n*log n)
-    Space Complexity: O(log n)
     :param array:
     :param low:
     :param high:
