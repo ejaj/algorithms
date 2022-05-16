@@ -8,3 +8,5 @@ References:
 4. https://www.youtube.com/user/AlgoRythmics/videos
 5. https://stackoverflow.com/questions/1517793/what-is-stability-in-sorting-algorithms-and-why-is-it-important
 6. https://visualgo.net/en
+7. https://www.analyticssteps.com/blogs/dijkstras-algorithm-shortest-path-algorithm
+7. https://stackabuse.com/dijkstras-algorithm-in-python/
