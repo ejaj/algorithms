@@ -82,12 +82,50 @@ def three_sum_has_map(nums, target):
     return []
 
 
+def l_3sum_leet_code(nums):
+    length = len(nums)
+    result = []
+    # for i in range(length):
+    #     for j in range(i + 1, length):
+    #         for k in range(j + 1, length):
+    #             if nums[i] + nums[j] + nums[k] == 0:
+    #                 sorted_result = sorted([nums[i], nums[j], nums[k]])
+    #                 if sorted_result not in result:
+    #                     result.append(sorted_result)
+    # return result
+    # Input: nums = [-1, 0, 1, 2, -1, -4]
+    # Output: [[-1, -1, 2], [-1, 0, 1]]
+    nums.sort()
+
+    # sorted_array = [-4, -1, -1, 0, 1, 2]
+
+    for i in range(length):
+        left, right = i + 1, length - 1
+        while left < right:
+            if nums[i] + nums[left] + nums[right] > 0:
+                right -= 1
+            elif nums[i] + nums[left] + nums[right] < 0:
+                left += 1
+            else:
+                sorted_result = sorted([nums[i], nums[left], nums[right]])
+                if sorted_result not in result:
+                    result.append([nums[i], nums[left], nums[right]])
+                left += 1
+                # Avoid duplicates for left
+                while nums[left] == nums[left - 1] and left < right:
+                    left += 1
+    return result
+
+
 def main():
-    nums = [1, 4, 45, 6, 10, 8]
-    target = 22
+    # nums = [1, 4, 45, 6, 10, 8]
+    # target = 22
     # print(three_sum_brute(nums, target))
     # print(three_sum_sorting_pointers(nums, target))
-    print(three_sum_has_map(nums, target))
+    # print(three_sum_has_map(nums, target))
+
+    nums = [-1, 0, 1, 2, -1, -4]
+    print(l_3sum_leet_code(nums))
 
 
 if __name__ == '__main__':
