@@ -30,7 +30,6 @@ def right_rotate_slice(arr, k):
         return None
     length = len(arr)
     k = k % length
-    print(arr[length - k:])
     return arr[length - k:] + arr[:length - k]
 
 
